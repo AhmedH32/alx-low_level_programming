@@ -14,10 +14,11 @@ int main(void)
 	for (i = 0; i < 26; i++)
 	{
 		putchar(chr);
-		putchar('\n');
 
 		chr++;
 	}
+
+	putchar('\n');
 
 	return (0);
 }
