@@ -3,45 +3,46 @@
 /* more headers goes there */
 
 /**
- * main - entry point
- *
- * Return: 0
- */
+* main - entry point
+*
+* Return: 0
+*/
 int main(void)
 {
-	int j = 48, i = 49, k, n = 0, m = 0, l = 0;
+int i, j, k,l,n = 0;
+j=k=l=48;    
 
-	for (k = 50; k < 58; k++)
-	{
-		putchar(j);
-		putchar(i);
-		putchar(k);
+for (i = 49; i < 58;i++)
+{
+putchar(l);
+putchar(k);
+putchar(' ');
+putchar(j);
+putchar(i);
 
-		if (j != 55 || i != 56 || k != 57)
-		{
-			putchar(',');
-			putchar(' ');
-		}
+if (i <57 || j < 57 || k < 57 || l < 57)
+{
+putchar(' ');
+putchar(',');
+}
 
-		if (k == 57)
-		{
-			i++;
-			m++;
-			k = 49 + m;
-		}
+if (i == 57)
+{
+i = 48;
+j ++;
+}
+if (j == 58)
+{   
 
-		if (i == 57)
-		{
-			j++;
-			n++;
-			i = 49 + n;
-			k = 50 + l;
-			m = 1 + l;
-			l++;
-		}
+k++;
+i = k;
+j = l;
+}
+
+
 }
 
 putchar('\n');
 
-	return (0);
+return (0);
 }
