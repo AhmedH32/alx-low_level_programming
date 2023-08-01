@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+void putter(int, int, int, int);
+void puttercom(int, int, int, int);
+
 /* more headers goes there */
 
 /**
