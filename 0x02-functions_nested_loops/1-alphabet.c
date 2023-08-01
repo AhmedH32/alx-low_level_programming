@@ -5,7 +5,7 @@
  *
  * Return: void
  */
-void print_alphapet(void)
+void print_alphabet(void)
 {
 	int i;
 
