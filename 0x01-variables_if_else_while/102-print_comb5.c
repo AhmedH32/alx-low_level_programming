@@ -21,6 +21,10 @@ int main(void)
 		putchar(j);
 		putchar(i);
 
+		if (i  == 57 && j == 57 && k == 56 && l == 57)
+		{
+			break;
+		}
 		if (i < 57 || j < 57 || k < 57 || l < 57)
 		{
 			putchar(' ');
@@ -29,17 +33,28 @@ int main(void)
 
 		if (i == 57)
 		{
-			i = 48;
+			i = 47;
 			j++;
 		}
 		if (j == 58)
 		{
-
 			k++;
 			i = k;
 			j = l;
-		}
 
+			if (k == 57)
+			{
+				j = l + 1;
+				i = 47;
+			}
+		}
+		if (k == 58)
+		{
+			k = 48;
+			i = 48;
+			l++;
+			j = l;
+		}
 
 	}
 
