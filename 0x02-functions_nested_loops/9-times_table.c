@@ -26,11 +26,13 @@ void times_table(void)
 				_putchar((n % 10) + 48);
 
 			}
-			else
+			else if (n != 0)
 			{
 				_putchar(' ');
 				_putchar(n + 48);
 			}
+			else 
+				_putchar(n + 48);
 
 			if (i == 9)
 				_putchar('\n');
