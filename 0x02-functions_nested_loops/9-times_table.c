@@ -1,0 +1,38 @@
+#include "main.h"
+#include <limits.h>
+
+/**
+ * times_table - prints all 9 times tables
+ *
+ * Return: void
+ */
+void times_table(void)
+{
+	int i, r, n;
+
+	for (r = 0; r < 10; r++)
+	{
+		for (i = 0; i < 10; i++)
+		{
+			n = i * r;
+			if (n > 9)
+			{
+				putchar((n / 10) + 48);
+				putchar((n % 10) + 48);
+
+			}
+			else
+				putchar(n + 48);
+
+			if (i < 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+			else
+				_putchar('\n');
+		}
+	}
+
+
+}
