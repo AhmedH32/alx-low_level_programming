@@ -37,10 +37,9 @@ void jack_bauer(void)
 		{
 			l++;
 			k = 0;
-
-			if (k == 4 && l == 2)
-				l++;
 		}
+		if (k == 4 && l == 2)
+			l++;
 		if (l == 3)
 			break;
 	}
