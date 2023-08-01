@@ -27,8 +27,8 @@ int main(void)
 		}
 		if (i < 57 || j < 57 || k < 57 || l < 57)
 		{
-			putchar(' ');
 			putchar(',');
+			putchar(' ');
 		}
 
 		if (i == 57)
