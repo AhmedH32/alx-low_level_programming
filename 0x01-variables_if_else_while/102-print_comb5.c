@@ -9,40 +9,41 @@
 */
 int main(void)
 {
-int i, j, k,l,n = 0;
-j=k=l=48;    
+	int i, j, k, l;
 
-for (i = 49; i < 58;i++)
-{
-putchar(l);
-putchar(k);
-putchar(' ');
-putchar(j);
-putchar(i);
+	j = k = l = 48;
 
-if (i <57 || j < 57 || k < 57 || l < 57)
-{
-putchar(' ');
-putchar(',');
-}
+	for (i = 49; i < 58; i++)
+	{
+		putchar(l);
+		putchar(k);
+		putchar(' ');
+		putchar(j);
+		putchar(i);
 
-if (i == 57)
-{
-i = 48;
-j ++;
-}
-if (j == 58)
-{   
+		if (i < 57 || j < 57 || k < 57 || l < 57)
+		{
+			putchar(' ');
+			putchar(',');
+		}
 
-k++;
-i = k;
-j = l;
-}
+		if (i == 57)
+		{
+			i = 48;
+			j++;
+		}
+		if (j == 58)
+		{
+
+			k++;
+			i = k;
+			j = l;
+		}
 
 
-}
+	}
 
-putchar('\n');
+	putchar('\n');
 
-return (0);
+	return (0);
 }
