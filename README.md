@@ -1,1 +1,1 @@
-#this is a programming repo#
+#this is the README for the 3rd c project#
