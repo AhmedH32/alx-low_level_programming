@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 
+void print_alphapet(void);
 int _putchar(char c);
 
 
