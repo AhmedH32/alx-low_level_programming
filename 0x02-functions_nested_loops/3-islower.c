@@ -2,7 +2,7 @@
 
 /**
  * _islower - checks whether input is lowercase
- * @c - input as int from 0 - 255
+ * @c: input as int from 0 - 255
  *
  * Return: 1 if lowercase , 0 otherwise
  */
