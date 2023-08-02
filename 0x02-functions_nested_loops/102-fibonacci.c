@@ -9,7 +9,7 @@ int main(void)
 {
 	long long i = 0, j = 1, k, tmp;
 
-	for (k = 0; k < 50; k++)
+	for (k = 0; k < 52; k++)
 	{
 		printf("%lli, ", i);
 		tmp = j;
