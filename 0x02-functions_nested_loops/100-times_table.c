@@ -4,8 +4,6 @@
 /**
  * print_times_table - prints n times table starting with 0
  * @n: max number for table
- *
- * Return: void
  */
 void print_times_table(int n)
 {
@@ -42,7 +40,7 @@ void print_times_table(int n)
 					_putchar(' ');
 					_putchar((k / 100) + 48);
 					_putchar(((k / 10) % 10) + 48);
-					_putchar(((k % 100) % 10) + 48);
+					_putchar(((k % 10) + 48);
 				}
 				if (j != n)
 					_putchar(',');
