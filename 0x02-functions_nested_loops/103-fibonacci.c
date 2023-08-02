@@ -7,17 +7,18 @@
  */
 int main(void)
 {
- 	unsigned long long i = 0, j = 1, k, tmp;
+ 	unsigned long i = 0, j = 1, sum = 0, tmp;
 
-	for (k = 0; k < 50; k++)
+	while (i < 4000000)
 	{
-		printf("%d, ", i);
+		if (i % 2 == 0)
+			sum += i;
 		tmp = j;
 		j = i + j;
 		i = tmp;
 
 	}
-	printf("\n");
+	printf("%lu\n", sum);
 
 	return (0);
 }
