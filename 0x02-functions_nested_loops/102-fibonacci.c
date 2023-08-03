@@ -7,11 +7,11 @@
  */
 int main(void)
 {
-	unsigned long i = 0, j = 1, k, tmp;
+	unsigned long i = 1, j = 2, k, tmp;
 
-	for (k = 0; k < 52; k++)
+	for (k = 0; k < 50; k++)
 	{	
-		if (k < 51)
+		if (k < 49)
 			printf("%lu, ", i);
 		else
 			printf("%lu\n", i);
