@@ -11,7 +11,7 @@ int main(void)
 
 	for (k = 0; k < 98; k++)
 	{
-		if (k < 49)
+		if (k < 97)
 			printf("%lu, ", i);
 		else
 			printf("%lu\n", i);
