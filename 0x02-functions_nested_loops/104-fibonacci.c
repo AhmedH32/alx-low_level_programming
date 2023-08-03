@@ -9,7 +9,7 @@ void second_fib(unsigned long i, unsigned long j);
 int main(void)
 {
 unsigned long i = 1, j = 2, k, tmp;
-unsigned long i2 , j2, overflow; 
+
 for (k = 0; k < 90; k++)
 {                        
 printf("%lu, ", i);
