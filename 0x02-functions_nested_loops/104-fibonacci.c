@@ -9,7 +9,7 @@
 int main(void)
 {
 	unsigned long i = 1, j = 2, k, tmp;
-	printf("%lu", ULONG_MAX)
+	printf("%lu", ULONG_MAX);
 	for (k = 0; k < 98; k++)
 	{
 		if (k < 97)
