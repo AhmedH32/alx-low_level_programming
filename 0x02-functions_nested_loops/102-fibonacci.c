@@ -10,7 +10,7 @@ int main(void)
 	unsigned long i = 1, j = 2, k, tmp;
 
 	for (k = 0; k < 50; k++)
-	{	
+	{
 		if (k < 49)
 			printf("%lu, ", i);
 		else
