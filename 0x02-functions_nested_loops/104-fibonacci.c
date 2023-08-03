@@ -11,7 +11,7 @@ int main(void)
 	unsigned long i = 1, j = 2, k, tmp;
 
 	for (k = 0; k < 90; k++)
-	{                        
+	{
 		printf("%lu, ", i);
 
 		tmp = j;
@@ -31,9 +31,9 @@ int main(void)
  * Return: void
  */
 void second_fib(unsigned long i, unsigned long j)
-{   
+{
 	int k;
-	unsigned long i2 , j2, overflow, tmp; 
+	unsigned long i2, j2, overflow, tmp;
 
 	i2 = i % 1000000000000;
 	j2 = j % 1000000000000;
@@ -49,7 +49,7 @@ void second_fib(unsigned long i, unsigned long j)
 	for (k = 0; k < 7; k++)
 	{
 		if (k < 6)
-		{		
+		{
 			printf("%lu", i);
 			printf("%lu, ", i2);
 		}
