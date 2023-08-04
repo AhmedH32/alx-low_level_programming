@@ -1,6 +1,3 @@
-2-largest_number.c CODE
-
-
 #include "main.h"
 
 /**
