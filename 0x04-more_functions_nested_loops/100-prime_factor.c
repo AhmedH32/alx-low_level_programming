@@ -32,7 +32,7 @@ int main(void)
 	{
 		maxp = n;
 	}
-	printf("%ld", maxp);
+	printf("%ld\n", maxp);
 
 	return (0);
 }
