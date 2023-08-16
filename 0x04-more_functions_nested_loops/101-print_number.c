@@ -11,7 +11,7 @@ void print_number(int n)
   int lngth = 1, f = 1, i;
   if (n < 0)
   {
-    putchar('-');
+    _putchar('-');
     n *= -1;
   }
   j = n;
@@ -30,7 +30,7 @@ void print_number(int n)
     }
     for (i = 0; i < f; i++)
     {
-        putchar((n / lngth) + 48);
+        _putchar((n / lngth) + 48);
         n %= lngth;
         lngth /= 10;
     }	
