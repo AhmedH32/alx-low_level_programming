@@ -34,5 +34,5 @@ void print_number(int n)
         n %= lngth;
         lngth /= 10;
     }	
-	_putchar('\n');
+	
 }
