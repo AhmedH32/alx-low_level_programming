@@ -7,14 +7,16 @@
  */
 void print_number(int n)
 {
-  int j;
+int n = INT_MIN;
+  unsigned int j;
   int lngth = 1, f = 1, i;
+  
   if (n < 0)
   {
-    _putchar('-');
-    n *= -1;
+    putchar('-');
+     j = -n;
   }
-  j = n;
+ printf("%u\n", j);
   while (1)
     {
         j /= 10;
@@ -30,9 +32,18 @@ void print_number(int n)
     }
     for (i = 0; i < f; i++)
     {
-        _putchar((n / lngth) + 48);
-        n %= lngth;
-        lngth /= 10;
-    }	
-	
+        if (n < 0)
+        {   
+           _putchar(((n / lngth) * -1) + 48);
+            n %= lngth;
+            lngth /= 10;
+        }
+        else
+        {
+           _putchar((n / lngth) + 48);
+            n %= lngth;
+            lngth /= 10;
+        }
+        
+    }
 }
