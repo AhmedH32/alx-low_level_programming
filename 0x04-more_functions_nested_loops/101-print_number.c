@@ -15,7 +15,6 @@ void print_number(int n)
     putchar('-');
      j = -n;
   }
- printf("%u\n", j);
   while (1)
     {
         j /= 10;
