@@ -7,7 +7,6 @@
  */
 void print_number(int n)
 {
-int n = INT_MIN;
   unsigned int j;
   int lngth = 1, f = 1, i;
   
