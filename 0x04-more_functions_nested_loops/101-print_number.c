@@ -7,12 +7,32 @@
  */
 void print_number(int n)
 {
-	_putchar((n % 10) + 48);
-
-	while (n > 10)
-	{
-		n /= 10;
-		_putchar((n % 10) + 48);
-	}
+  int j;
+  int lngth = 1, f = 1, i;
+  if (n < 0)
+  {
+    putchar('-');
+    n *= -1;
+  }
+  j = n;
+  while (1)
+    {
+        j /= 10;
+        if (j > 0)
+        {
+            lngth *= 10;
+            f += 1;
+        }
+        else
+            break;
+        
+      
+    }
+    for (i = 0; i < f; i++)
+    {
+        putchar((n / lngth) + 48);
+        n %= lngth;
+        lngth /= 10;
+    }	
 	_putchar('\n');
 }
