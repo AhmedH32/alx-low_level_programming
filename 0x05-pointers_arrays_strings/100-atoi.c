@@ -8,7 +8,8 @@
 int _atoi(char *s)
 {
 	short ngtv = 1;
-	int num = 0, i = 0;
+	unsigned int num = 0, i = 0;
+	int finalnum = 0;
 
 	while (*(s + i) != '\0')
 	{
@@ -18,7 +19,11 @@ int _atoi(char *s)
 		}
 		if (*(s + i) == '-')
 			ngtv *= -1;
+		i++;
 	}
-	num *= ngtv;
-	return (num);
+	if (ngtv == -1)
+		finalnum = num * ngtv;
+	else
+		finalnum = num;
+	return (finalnum);
 }
