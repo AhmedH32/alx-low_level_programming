@@ -11,6 +11,9 @@ char *cap_string(char *n)
 
 	while (n[i] != '\0')
 	{
+		if (i == 0)
+			if (n[i + 1] <= 122 && n[i + 1] >= 97)
+				n[i + 1] -= 32;
 		if (n[i] == ' ' ||
 		    n[i] == '\t' ||
 		    n[i] == '\n' ||
