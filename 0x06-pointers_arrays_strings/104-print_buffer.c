@@ -1,65 +1,49 @@
 #include "main.h"
+#include <stdio.h>
 
+/**
+* print_buffer - outputs given bugger
+* @b: said buffer
+* @size: size of the buffer
+* Return: nothing void
+*/
 void print_buffer(char *b, int size)
 {
-    int i = 0, j = 0, k, l, n, c;
-    
-if (size <= 0)
-    {
-        printf("\n");
-        return;
-    }
+	int k, l, i;
 
-    for (l = 0; l < size; )
-    {
-        printf("%08x: ",j);
-    
-        for(k = 0; k < 10; k++)
-        {
-		c = b[i];
-            if (l >= size)
-            {
-                for (n = 0; n < 10- k; n++)
-                {
-                    printf("  ");
-                    if (n % 2)
-                        printf(" ");
-                }
-               
-                    break;
-            }
-                printf("%02x", c);
-            if(k % 2)
-                printf(" ");
-            i++;
-            l++;
-        }
-        if (l >= size)
-            {
-                l -= k;
-                i -= k;
-            }
-        else
-        {
-            l -= 10;
-            i -= 10;
-        }
-        
-        for(k = 0; k < 10; k++)
-        {
-		c = b[i];
-            if (l >= size)
-            {
-                    break;
-            }
-            if (c < ' '|| c > 132)
-                printf(".");
-            else
-                printf("%c",c);
-            i++;
-            l++;
-        }
-        printf("\n");
-        j += 10;
-    }
+	k = 0;
+
+	if (size <= 0)
+	{
+		printf("\n");
+		return;
+	}
+	while (k < size)
+	{
+		l = size - k < 10 ? size - k : 10;
+		printf("%08x: ", k);
+		for (i = 0; i < 10; i++)
+		{
+			if (i < l)
+				printf("%02x", b[k + i]);
+			else
+				printf("  ");
+			if (i % 2)
+			{
+				printf(" ");
+			}
+		}
+		for (i = 0; i < l; i++)
+		{
+			int z = b[k + i];
+
+			if (z < 32 || z > 132)
+			{
+				z = '.';
+			}
+			printf("%c", z);
+		}
+		printf("\n");
+		k += 10;
+	}
 }
