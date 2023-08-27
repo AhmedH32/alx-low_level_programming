@@ -35,8 +35,8 @@ char *infinite_add (char *n1, char *n2, char *r, int size_r)
     bigger = i;
   for (; bigger >= 0; bigger--, k++)
     {
-      if (k + 1 >= size_r)
-	        return (0);
+     // if (k + 1 >= size_r)
+//	        return (0);
       overflow = 0;
 
       tmp = ((n1[i] - '0') + (n2[j] - '0')) + overflow;
@@ -44,7 +44,8 @@ char *infinite_add (char *n1, char *n2, char *r, int size_r)
       overflow = (tmp / 10);
 
       r[k] = ((tmp % 10) + '0');
-
+	if (k + 1 >= size_r)
+		return (0);
 
       if (j > 0)
 	j--;
