@@ -18,7 +18,7 @@ void revstringer (char *s)
 
 char *infinite_add (char *n1, char *n2, char *r, int size_r)
 {
-  int i, j, overflow, tmp, k, bigger;
+  int i, j, overflow, tmp, k, bigger, v1, v2;
 
   i = j = overflow = k = 0;
   while (n1[i] != '\0')
@@ -33,22 +33,24 @@ char *infinite_add (char *n1, char *n2, char *r, int size_r)
     bigger = j;
   else
     bigger = i;
-  for (; bigger >= 0; bigger--, k++)
+  for (; bigger >= 0; bigger--, k++,i--,j--)
     {
-      overflow = 0;
+	    if (i < 0)
+		    v1 = 0;
+	    else
+		    v1 = n1[i] - '0';
+	    if (j < 0)
+		    v2 = 0;
+	    else 
+		    v2 = n2[j] - '0';
+     
 
-      tmp = ((n1[i] - '0') + (n2[j] - '0')) + overflow;
-
+      tmp = ((v1) + (v2)) + overflow;
+	overflow = 0;
       overflow = (tmp / 10);
-
-      r[k] = ((tmp % 10) + '0');
 	if (k + 1 >= size_r)
 		return (0);
-
-      if (j > 0)
-	j--;
-      if (i > 0)
-	i--;
+      r[k] = ((tmp % 10) + '0');
 
     }
 
