@@ -4,6 +4,12 @@ void print_buffer(char *b, int size)
 {
     int i = 0, j = 0, k, l, n;
     
+if (size <= 0)
+    {
+        printf("\n");
+        return;
+    }
+
     for (l = 0; l < size; )
     {
         printf("%08x: ",j);
