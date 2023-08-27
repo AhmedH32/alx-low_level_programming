@@ -2,7 +2,7 @@
 
 void print_buffer(char *b, int size)
 {
-    int i = 0, j = 0, k, l, n;
+    int i = 0, j = 0, k, l, n, c;
     
 if (size <= 0)
     {
@@ -16,6 +16,7 @@ if (size <= 0)
     
         for(k = 0; k < 10; k++)
         {
+		c = b[i];
             if (l >= size)
             {
                 for (n = 0; n < 10- k; n++)
@@ -27,7 +28,7 @@ if (size <= 0)
                
                     break;
             }
-                printf("%02x",b[i]);
+                printf("%02x", c);
             if(k % 2)
                 printf(" ");
             i++;
@@ -46,19 +47,15 @@ if (size <= 0)
         
         for(k = 0; k < 10; k++)
         {
+		c = b[i];
             if (l >= size)
             {
                     break;
             }
-            if (b[i - 1] == '0')
-            {
-                printf(" ");
-                    break;
-            }
-            if (b[i] < ' '|| b[i] > 132)
+            if (c < ' '|| c > 132)
                 printf(".");
             else
-                printf("%c",b[i]);
+                printf("%c",c);
             i++;
             l++;
         }
