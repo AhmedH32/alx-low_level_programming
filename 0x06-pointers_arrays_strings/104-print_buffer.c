@@ -65,4 +65,5 @@ if (size <= 0)
         printf("\n");
         j += 10;
     }
+printf("\n");
 }
