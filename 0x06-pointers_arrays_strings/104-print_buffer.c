@@ -55,7 +55,7 @@ if (size <= 0)
                 printf(" ");
                     break;
             }
-            if (b[i] < ' ' || b[i] > 132)
+            if (b[i] < ' ')
                 printf(".");
             else
                 printf("%c",b[i]);
