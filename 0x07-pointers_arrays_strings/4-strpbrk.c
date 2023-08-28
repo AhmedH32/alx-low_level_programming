@@ -6,7 +6,7 @@
 * @accept: charset
 * Return: pointer to unsigned int
 */
-char *_strpbrk(char *s, char *accept);
+char *_strpbrk(char *s, char *accept)
 {
 	int i = 0, j = 0, k, l, found = 0;
 
