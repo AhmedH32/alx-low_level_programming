@@ -8,7 +8,7 @@
  */
 char *_strchr(char *s, char c)
 {
-	int i = 0, found;
+	int i = 0, found = -1;
 
 	while (s[i] != '\0')
 	{
@@ -19,9 +19,9 @@ char *_strchr(char *s, char c)
 		}
 		i++;
 	}
-	if (found)
-		return (s + i);
-	else
+	if (found == -1)
 		return (NULL);
+	else
+		return (s + i);
 
 }
