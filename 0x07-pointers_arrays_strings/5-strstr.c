@@ -30,7 +30,8 @@ char *_strstr(char *haystack, char *needle)
             }
         }
     }
-   
+   if (j == 0)
+	   return (haystack);
     if (flag)
     {
         k--;
