@@ -29,7 +29,7 @@ char *_strpbrk(char *s, char *accept);
 			break;
 	}
 	if (found)
-		return (s + k)
+		return (s + k);
 	else
 		return (NULL);
 }
