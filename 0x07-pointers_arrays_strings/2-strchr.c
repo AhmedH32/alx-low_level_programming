@@ -17,6 +17,7 @@ char *_strchr(char *s, char c)
 			found = i;
 			break;
 		}
+		i++;
 	}
 	if (found)
 		return (s + i);
