@@ -19,6 +19,8 @@ char *_strchr(char *s, char c)
 		}
 		i++;
 	}
+	if (c == '\0')
+		found = i;
 	if (found == -1)
 		return (NULL);
 	else
