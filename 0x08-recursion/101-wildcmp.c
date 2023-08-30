@@ -8,11 +8,11 @@ int actual_wildcmp(char *s1, char *s2, int len1, int len2, int i, int j)
         {
             return (1);
         }
-        else if (s2[j]== '*')
+        else if (s2[j]== '*' && j + 1 == len2)
         {
             return (actual_wildcmp(s1, s2, len1, len2, i - 1, j));
         }
-        else
+	else
         {
             return (0);
         }
