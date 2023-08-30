@@ -11,6 +11,8 @@ int actual_prime(int n, int j)
 	}
 	if (n == j)
 		return (1);
+	else
+		return (0);
 }
 int is_prime_number(int n)
 {
