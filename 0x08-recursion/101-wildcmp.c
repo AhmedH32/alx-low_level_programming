@@ -1,6 +1,11 @@
 #include "main.h"
 
-
+/**
+ * wildwild - compares string wild asterisk
+ * @str1: pointer to first string
+ * @str2: pointer to second string
+ * Return: 1 if same 0 if different
+ */
 int wildwild(char *str1, char *str2)
 {
 	if (*str1 == '\0')
@@ -22,7 +27,13 @@ int wildwild(char *str1, char *str2)
 	}
 	return (0);
 }
+/**
+ * wildcmp - compares string wild asterisk
+ * @s1: pointer to first string
+ * @s2: pointer to second string
+ * Return: 1 if same 0 if different
+ */
 int wildcmp(char *s1, char *s2)
 {
-	return wildwild(s1, s2);
+	return (wildwild(s1, s2));
 }
