@@ -21,7 +21,7 @@ int _atoi(char *s)
 		}
 		if (*(s + i) == '-')
 			ngtv *= -1;
-			i++;
+		i++;
 	}
 	if (ngtv == -1)
 		finalnum = num * ngtv;
