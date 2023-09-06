@@ -24,7 +24,7 @@ int wordnofn(char *str)
 }
 /**
  * setwordslen - sets the lenght of each word
- * @strtrgt: the pointer that will be returned
+ * @wordslen: array for word length
  * @str: the original str
  * Return: void
  */
