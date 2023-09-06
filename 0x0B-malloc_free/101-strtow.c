@@ -51,7 +51,6 @@ void setwordslen(char **strtrgt, char *str, int *wordslen)
 			if (str[i + 1] == ' ' || str[i + 1] == '\0')
 			{
 				wordslen[crnt] = tmp;
-				strtrgt[crnt] = malloc(sizeof(char) * tmp + 1);
 				flag = 0;
 				tmp = 0;
 				crnt++;
@@ -75,7 +74,7 @@ char **strtow(char *str)
 	wordno = wordnofn(str, &wordslen);
 	if (!wordno)
 		return (NULL);
-	arrstr = malloc(sizeof(char *) * wordno + 1);
+	arrstr = malloc(sizeof(char *) * (wordno + 1));
 	setwordslen(arrstr, str, wordslen);
 	for (i = 0; i < wordno; i++)
 	{
