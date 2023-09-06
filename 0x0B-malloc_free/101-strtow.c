@@ -19,7 +19,7 @@ int wordnofn (char *str, int **wordslen)
 }
 void setwordslen(char **strtrgt, char *str, int *wordslen)
 {
-        int i = 0, flag = 0, tmp = 0, crnt = 0;
+        int i = 0, flag = 1, tmp = 0, crnt = 0;
         while (str[i])
         {
                 if (str[i] == ' ')
@@ -47,7 +47,7 @@ void setwordslen(char **strtrgt, char *str, int *wordslen)
 }
 char **strtow(char *str)
 {
-        int i = 0, wordno = 0, *wordslen, flag = 0, k = 0, crnt = 0;
+        int i = 0, wordno = 0, *wordslen, flag = 1, k = 0, crnt = 0;
         char **arrstr;
         
         if (str == NULL)
