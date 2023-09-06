@@ -62,7 +62,7 @@ char **strtow(char *str)
         {
             arrstr[i] = malloc(sizeof(char) * wordslen[i] + 1);
         }
-	i++;
+	i = 0;
         while (str[i])
         {
                 if (str[i] == ' ')
