@@ -48,7 +48,7 @@ void setwordslen(char **strtrgt, char *str, int *wordslen)
 		else if (flag)
 		{
 			tmp++;
-			if (str[i + 1] == ' ')
+			if (str[i + 1] == ' ' || str[i + 1] == '\0')
 			{
 				wordslen[crnt] = tmp;
 				strtrgt[crnt] = malloc(sizeof(char) * tmp + 1);
