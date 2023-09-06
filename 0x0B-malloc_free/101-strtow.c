@@ -63,7 +63,7 @@ void setwordslen(char *str, int *wordslen)
  */
 char **strtow(char *str)
 {
-	int i = 0, wordno = 0, *wordslen, flag = 1, k = 0, crnt = 0;
+	int i = 0, wordno = 0, wordslen[100], flag = 1, k = 0, crnt = 0;
 	char **arrstr;
 
 	if (str == NULL)
