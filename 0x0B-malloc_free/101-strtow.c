@@ -31,7 +31,7 @@ int wordnofn(char *str, int **wordslen)
  * @wordslen: the pointer to the array containing the word lengths
  * Return: void
  */
-void setwordslen(char **strtrgt, char *str, int *wordslen)
+void setwordslen(char *str, int *wordslen)
 {
 	int i = 0, flag = 1, tmp = 0, crnt = 0;
 
