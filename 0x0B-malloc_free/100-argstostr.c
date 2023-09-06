@@ -8,7 +8,7 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i, len, j, k = 0;
+	int i, len = 0, j, k = 0;
 	char *str;
 
 	if (!ac || av == NULL)
@@ -22,6 +22,7 @@ char *argstostr(int ac, char **av)
 			j++;
 		}
 	}
+	printf("the length is %d\n", len);
 	str = malloc(sizeof(char) * len);
 	for (i = 0; i < ac; i++)
 	{
