@@ -75,7 +75,7 @@ char **strtow(char *str)
 	if (!wordno)
 		return (NULL);
 	arrstr = malloc(sizeof(char *) * (wordno + 1));
-	setwordslen(arrstr, str, wordslen);
+	setwordslen(str, wordslen);
 	for (i = 0; i < wordno; i++)
 	{
 		arrstr[i] = malloc(sizeof(char) * wordslen[i] + 1);
