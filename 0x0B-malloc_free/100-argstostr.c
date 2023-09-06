@@ -22,7 +22,6 @@ char *argstostr(int ac, char **av)
 			j++;
 		}
 	}
-	printf("the length is %d\n", len);
 	str = malloc(sizeof(char) * len);
 	for (i = 0; i < ac; i++)
 	{
