@@ -2,10 +2,9 @@
 /**
  * wordnofn - counts number of words in str
  * @str: string to count
- * @wordslen: pointer to array of pointers
  * Return: no of words
  */
-int wordnofn(char *str, int **wordslen)
+int wordnofn(char *str)
 {
 	int i = 0, wordno = 0, flag = 0;
 
@@ -21,14 +20,12 @@ int wordnofn(char *str, int **wordslen)
 		i++;
 	}
 
-	*wordslen = (int *)malloc(sizeof(int) * wordno);
 	return (wordno);
 }
 /**
  * setwordslen - sets the lenght of each word
  * @strtrgt: the pointer that will be returned
  * @str: the original str
- * @wordslen: the pointer to the array containing the word lengths
  * Return: void
  */
 void setwordslen(char *str, int *wordslen)
@@ -71,7 +68,7 @@ char **strtow(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	wordno = wordnofn(str, &wordslen);
+	wordno = wordnofn(str);
 	if (!wordno)
 		return (NULL);
 	arrstr = malloc(sizeof(char *) * (wordno + 1));
@@ -103,7 +100,6 @@ char **strtow(char *str)
 		}
 		i++;
 	}
-	free(wordslen);
 	arrstr[crnt + 1] = NULL;
 	return (arrstr);
 }
