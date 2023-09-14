@@ -4,7 +4,6 @@
  * get_op_func - gets the function to execute the op
  * @s: the op
  * Return: NULL if not any of the ops otherwise a pointer
- * to the function of the op that takes two int inputs
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -16,14 +15,17 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
+
 	int i = 0;
 
 	while (ops[i].op != NULL)
 	{
 		if (s[0] == ops[i].op[0])
+		{
 			return (ops[i].f);
+		}
 		i++;
 	}
-	return (NULL);
+	return (ops[i].f);
 
 }
