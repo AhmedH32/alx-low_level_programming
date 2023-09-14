@@ -13,7 +13,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 
 	if (argc != 4)
 	{
-		printf("ERROR\n");
+		printf("Error\n");
 		exit(98);
 	}
 	num1 = atoi(argv[1]);
@@ -21,16 +21,16 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 
 	if (argv[2][1] != '\0')
 	{
-		printf("ERROR\n");
+		printf("Error\n");
 		exit(99);
 	}
 
 	ops = get_op_func(argv[2]);
 	if (ops == NULL)
 	{
-		printf("ERROR\n");
+		printf("Error\n");
 		exit(99);
 	}
-	printf("%d\n", get_op_func(argv[2])(num1, num2));
+	printf("%d\n", ops(num1, num2));
 	return (0);
 }
