@@ -31,6 +31,6 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		printf("ERROR\n");
 		exit(99);
 	}
-	printf("%d\n", ops(num1, num2));
+	printf("%d\n", get_op_func(argv[2])(num1, num2));
 	return (0);
 }
