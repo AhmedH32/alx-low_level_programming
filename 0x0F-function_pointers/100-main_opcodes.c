@@ -4,7 +4,7 @@
 
 /**
  * main - a function that points to its own main fnc and prints its op code
- * @argc: the number of arguments 
+ * @argc: the number of arguments
  * @argv: the arguments
  * Return: 0 success
  */
