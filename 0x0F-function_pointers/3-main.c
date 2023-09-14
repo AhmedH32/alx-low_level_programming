@@ -6,7 +6,7 @@
  * @argv: pointer to array containing input strings
  * Return: 98 if argc != 4 99 if op is wrong the output otherwise
  */
-int main(int argc, char *argv[])
+int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	int num1, num2;
 	int (*ops)(int, int);
