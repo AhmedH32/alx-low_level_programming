@@ -13,8 +13,8 @@
  */
 typedef struct list_m
 {
-	unsigned int len;
 	char *str;
+	unsigned int len;
 	struct list_m *next;
 } list_t;
 
