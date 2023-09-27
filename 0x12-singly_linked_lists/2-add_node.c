@@ -12,11 +12,15 @@ list_t *add_node(list_t **head, const char *str)
 	unsigned int tool = 0;
 
 	while (str[tool])
+	{
 		tool += 1;
+	}
 
 	nr = malloc(sizeof(list_t));
 	if (nr == NULL)
+	{
 		return (NULL);
+	}
 
 	nr->str = strdup(str);
 	nr->len = tool;
