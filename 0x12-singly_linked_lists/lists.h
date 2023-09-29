@@ -10,12 +10,12 @@
  * @len: an int
  * @next: link to the next member of the list
  */
-struct list_t
+typedef struct list_s
 {
 	char *str;
 	int len;
 	struct list_t *next;
-};
+}list_t;
 
 size_t print_list(const list_t *h);
 
