@@ -1,6 +1,15 @@
 #ifndef LISTS_H
 #define LISTS_H
 
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * struct list_t - a struct for a linked list list_t
+ * @str: string
+ * @len: an int
+ * @next: link to the next member of the list
+ */
 struct list_t
 {
 	char *str;
